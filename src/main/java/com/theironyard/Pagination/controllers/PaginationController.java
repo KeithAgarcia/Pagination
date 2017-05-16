@@ -28,6 +28,7 @@ public class PaginationController {
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String home(Model model, HttpSession session, String state, Integer page) {
 
+
         page = (page == null) ? 0 : page;
         PageRequest pr = new PageRequest(page, 10);
 
