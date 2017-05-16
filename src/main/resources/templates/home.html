@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/" method="get">
+    <input type="text" placeholder="Search" name="search"/>
+    <button type="submit">Search</button>
+</form>
+<br><br>
+
+
+    <ol>
+        <table>
+            <th>Street</th>
+            <th>State</th>
+            <th>Zip Code</th>
+            {{#addresses}}
+            <tr>
+                <td>{{street}}</td>
+                <td>{{state}}</td>
+                <td>{{zipCode}}</td>
+            </tr>
+            {{/addresses}}
+        </table>
+
+{{#showNext}}
+<a href="/?page={{nextPage}}{{#state}}&state={{.}}{{/state}}">Next</a>
+{{/showNext}}
+
+</body>
+</html>
