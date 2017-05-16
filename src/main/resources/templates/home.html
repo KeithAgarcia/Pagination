@@ -77,10 +77,14 @@
             </tr>
             {{/addresses}}
         </table>
+    </ol>
 
 {{#showNext}}
 <a href="/?page={{nextPage}}{{#state}}&state={{.}}{{/state}}">Next</a>
 {{/showNext}}
 
+{{#showPrevious}}
+<a href="/?page={{previousPage}}{{#state}}&state={{.}}{{/state}}">Previous</a>
+{{/showPrevious}}
 </body>
 </html>

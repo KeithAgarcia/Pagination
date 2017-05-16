@@ -44,6 +44,8 @@ public class PaginationController {
         model.addAttribute("addresses", p);
         model.addAttribute("nextPage", page + 1);
         model.addAttribute("showNext", p.hasNext());
+        model.addAttribute("previousPage", page -1);
+        model.addAttribute("showPrevious", p.hasPrevious());
         model.addAttribute("state", state);
         return "home";
     }
